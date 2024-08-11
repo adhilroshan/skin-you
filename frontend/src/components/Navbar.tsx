@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
     const navItems = ["Home", "Treatments", "Skin & FAQ", "Medical Clinic", "Photogallery", "Media", "About Us", "Contact"];
     return (
         <nav
-            className="flex items-center rounded-b-2xl justify-around w-full shadow-lg  text-sm p-2 px-5 font-bold  bg-white    ">
+            className="flex items-center rounded-b-2xl justify-around w-full shadow-lg max-h-[20%] text-sm p-2 px-5 font-bold  bg-white    ">
             <img className="object-contain py-2 w-40 lg:w-60" src={logo} alt="logo" />
             <div className="lg:flex text-[#111]  hidden">
                 {navItems.map((item) => (

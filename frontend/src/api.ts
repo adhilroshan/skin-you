@@ -2,7 +2,7 @@ import axios from 'axios';
 import { Appointment, AppointmentFormData } from './types';
 
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://skin-you.onrender.com/api';
 export const bookAppointment = async (appointmentData: AppointmentFormData): Promise<Appointment> => {
     const response = await axios.post<Appointment>(`${API_URL}/book`, appointmentData);
     return response.data;
