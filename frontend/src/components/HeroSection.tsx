@@ -56,7 +56,7 @@ const HeroSection = () => {
                 ))}
             </Carousel>
 
-            <Link to="/book" className=" absolute bottom-14 right-14 border-2 font-bold rounded-full  border-amber-600 text-amber-600 py-2 px-4  hover:shadow-xl transition-all duration-200 shadow-amber-600">
+            <Link to="/book" className=" absolute bottom-14 right-14 border-2 font-bold rounded-full  border-amber-600 text-amber-600 py-2 px-4 active:scale-95  hover:shadow-xl transition-all duration-200 shadow-amber-600">
                 Book an Appointment
             </Link>
         </section>
