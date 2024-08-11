@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { getAppointments, deleteAppointment, searchAppointments } from '../api';
+import { getAppointments, searchAppointments } from '../api';
 import { Appointment } from '../types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faCalendarAlt, faClock } from '@fortawesome/free-solid-svg-icons';
