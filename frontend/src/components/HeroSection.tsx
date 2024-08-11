@@ -29,18 +29,7 @@ const HeroSection = () => {
         }
     };
     return (
-        <section className='h-2/3 w-full flex flex-col '>
-            {/* <Carousel theme={{
-                root: {
-                    leftControl: "absolute left-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none bg-opacity-50",
-                    rightControl: "absolute right-0 top-0 flex h-full items-center justify-center px-4 focus:outline-none"
-                },
-
-            }} slideInterval={5000} indicators={false} pauseOnHover> */}
-            {/* <img src={carousel1} alt="..." /> */}
-            {/* <img src={carousel2} alt="..." /> */}
-            {/* <img src={carousel3} alt="..." /> */}
-
+        <section className='w-full flex flex-col '>
             <Carousel
                 // swipeable={false}
                 // draggable={false}
@@ -65,16 +54,11 @@ const HeroSection = () => {
                         <img className="absolute h-full w-full asp object-cover" src={image} key={index} alt="..." />
                     </div>
                 ))}
-                {/* <img src={carousel2} alt="..." />
-                <img src={carousel3} alt="..." /> */}
             </Carousel>
 
-            <Link to="/book" className=" absolute bottom-14 right-14 border  border-amber-600 text-amber-600 py-2 px-4 rounded-md hover:shadow-xl transition-all duration-200 shadow-amber-600">
+            <Link to="/book" className=" absolute bottom-14 right-14 border-2 font-bold rounded-full  border-amber-600 text-amber-600 py-2 px-4  hover:shadow-xl transition-all duration-200 shadow-amber-600">
                 Book an Appointment
             </Link>
-            {/* <button className="absolute bottom-14 right-14" color="gold-7"  >Book Appointment</button> */}
-            {/* <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-            </div> */}
         </section>
     );
 };
