@@ -4,6 +4,7 @@ import { Appointment } from '../types';
 import { getAppointmentById, deleteAppointment } from '../api';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { faPhone, faCalendarAlt, faClock } from '@fortawesome/free-solid-svg-icons';
 
 const AppointmentDetails: React.FC = () => {
     const { id } = useParams<{ id: string }>();
@@ -62,13 +63,38 @@ const AppointmentDetails: React.FC = () => {
                         <FontAwesomeIcon icon={faTrashAlt} size="lg" />
                     </button>
                 </div>
-                <p className="font-semibold text-xl text-gray-900">{appointment.name}</p>
+                <div className='flex flex-col'>
+                    <p className="text-gray-600">{appointment.service}</p>
+                    <p className="font-semibold text-xl text-gray-900">{appointment.name}</p>
+                    <p className="text-gray-600">Concern: {appointment.concern}</p>
+                </div>
+                <div className='flex flex-col my-2'>
+                    <p className="text-gray-600 text-sm">
+                        <FontAwesomeIcon icon={faPhone} className="mr-2" />
+                        {appointment.phoneNumber}
+
+                    </p>
+                    <p className="text-sm text-gray-500">
+                        <FontAwesomeIcon icon={faCalendarAlt} className="mr-2" />
+                        {new Date(appointment.date).toDateString()}
+
+                    </p>
+                    <p className='flex gap-2 text-sm text-gray-500  items-center '>
+                        <span className=' font-medium'>
+
+                            <FontAwesomeIcon icon={faClock} className="mr-2" />
+                            {appointment.time}
+                        </span>
+                    </p>
+
+                </div>
+                {/* <p className="font-semibold text-xl text-gray-900">{appointment.name}</p>
                 <p className="text-gray-600">{appointment.service}</p>
                 <p className="text-sm text-gray-500">
-                    {new Date(appointment.date).toLocaleDateString()} at {appointment.time}
+                    {new Date(appointment.date).toDateString()} at {appointment.time}
                 </p>
                 <p className="text-gray-600">Phone: {appointment.phoneNumber}</p>
-                <p className="text-gray-600">Concern: {appointment.concern}</p>
+                <p className="text-gray-600">Concern: {appointment.concern}</p> */}
             </div>
         </div>
     );
