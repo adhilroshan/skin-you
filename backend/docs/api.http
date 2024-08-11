@@ -1,0 +1,18 @@
+POST http://localhost:5000/api/book  HTTP/1.1
+content-type: application/json
+
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "phoneNumber": "1234567890",
+  "date": "2024-08-17",
+  "time": "4:00",
+  "service": "Skin Consultation",
+  "concern": "I have a rash on my face"
+}
+###
+
+GET http://localhost:5000/api/appointments
+
+###
+GET http://localhost:5000/api/search?query=John
